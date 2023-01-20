@@ -14,7 +14,6 @@ export default class MultipleItems extends Component {
         speed: 500,
         slidesToShow: 5,
         slidesToScroll: 3,
-
       };
       return (
         <div style={{paddingTop:"20px", margin:"auto",width:"94%",}}>
@@ -43,10 +42,7 @@ export default class MultipleItems extends Component {
             </div>
             <div>
               <Image pr={2}   src="https://www.ikea.com/images/8c/13/8c13033770991ef467371a52fbf56c3c.jpg?f=xxs"></Image>
-            </div>
-            {/* <div>
-             <Image src="https://www.ikea.com/images/8c/13/8c13033770991ef467371a52fbf56c3c.jpg?f=xxs"></Image>
-            </div> */}
+            </div> 
           </Slider>
         </div>
       );
