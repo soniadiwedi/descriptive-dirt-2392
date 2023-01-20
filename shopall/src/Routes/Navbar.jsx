@@ -42,7 +42,7 @@ import { NavLink } from 'react-router-dom';
 export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
 
-  const links=[{path:"/", title:"Home"},{path:"/products", title:"Products"},{path:"./newinShopAll", title:"NewinShopAll"},{path:"/offers", title:"Offers"},]
+  const links=[{path:"/", title:"Home"},{path:"/products", title:"Products"},{path:"./newinShopAll", title:"NewinShopAll"},{path:"/offers", title:"Offers"}]
   const style={
     display:'flex',
     justifyContent:'space-around',

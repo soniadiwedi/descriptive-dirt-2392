@@ -37,8 +37,11 @@ export default function Login() {
   const [showPassword, setShowPassword] = useState(false);
   return (
     <>
-      <Icon as={BiUser} onClick={onOpen} fontSize={30} />
+      
+      <Icon _hover={{bg:"grey",cursor:"pointer"}}  as={BiUser} onClick={onOpen} fontSize={30}>Hej! Log in or sign up</Icon>
       <Text>Hej! Log in or sign up</Text>
+     
+      
       <Drawer
         isOpen={isOpen}
         placement="right"
@@ -49,7 +52,7 @@ export default function Login() {
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
-          <DrawerHeader bg="blue.500">
+          <DrawerHeader bg="white">
             <Flex justify={"center"}>
               <Stack mx={"auto"} maxW={"sm"}>
                

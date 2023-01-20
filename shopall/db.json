@@ -1,0 +1,109 @@
+{
+  "beds": [
+    {
+      "createdAt": "2023-01-18T11:07:12.783Z",
+      "name": "Denise Hoeger",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1214.jpg",
+      "id": "1",
+      "title": "Beds",
+      "price": "15000",
+      "description": "Ext bed frame with slatted bed base, white, 80x200 cm (31 1/2x78 3/4 \")",
+      "image": "https://www.ikea.com/in/en/images/products/sundvik-ext-bed-frame-with-slatted-bed-base-white__0917405_ph168403_s5.jpg?f=s",
+      "category": "beds",
+      "rating": "4.0",
+      "discount": "300"
+      },
+      {
+      "createdAt": "2023-01-19T05:29:11.336Z",
+      "name": "Leo Ryan",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/206.jpg",
+      "id": "2",
+      "title": "Beds",
+      "price": "1600",
+      "description": "Ext bed frame with slatted bed base, white, 80x200 cm (31 1/2x78 3/4 \")",
+      "image": "https://www.ikea.com/in/en/images/products/brimnes-day-bed-w-2-drawers-2-mattresses-white-agotnes-firm__1092117_pe863030_s5.jpg?f=s",
+      "category": "beds",
+      "rating": "4.8",
+      "discount": "200"
+      },
+      {
+      "createdAt": "2023-01-18T18:30:52.749Z",
+      "name": "Sheryl Larkin",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/647.jpg",
+      "id": "3",
+      "title": "Beds",
+      "price": "1200",
+      "description": "Ext bed frame with slatted bed base, white, 80x200 cm (31 1/2x78 3/4 \")",
+      "image": "https://www.ikea.com/in/en/images/products/songesand-bed-frame-brown-luroey__0800862_ph162917_s5.jpg?f=s",
+      "category": "beds",
+      "rating": "2.0",
+      "discount": "700"
+      },
+      {
+      "createdAt": "2023-01-18T18:21:25.990Z",
+      "name": "Wade Cormier",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1076.jpg",
+      "id": "4",
+      "title": "Beds",
+      "price": "1200",
+      "description": "Bed frame with headboard, light beige/Luröy, 140x200 cm (55 1/8x78 3/4 \")",
+      "image": "https://www.ikea.com/in/en/images/products/gursken-bed-frame-with-headboard-light-beige-luroey__1101994_pe866804_s5.jpg?f=s",
+      "category": "beds",
+      "rating": "2.0",
+      "discount": "700"
+      },
+      {
+      "createdAt": "2023-01-19T06:47:47.681Z",
+      "name": "Freda Littel I",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/465.jpg",
+      "id": "5",
+      "title": "sofa",
+      "price": "18000",
+      "description": "2-seat sofa, Djuparp red-brown",
+      "image": "https://www.ikea.com/global/assets/navigation/images/sofa-beds-10663.jpeg?imwidth=400",
+      "category": "sofa",
+      "rating": "2.0",
+      "discount": "900"
+      },
+      {
+      "createdAt": "2023-01-18T17:57:56.107Z",
+      "name": "Mrs. Deanna Sauer",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1221.jpg",
+      "id": "6",
+      "title": "sofa",
+      "price": "1800",
+      "description": "sofa",
+      "image": "https://639b295bd5141501974d54b3.mockapi.io/bedrooms",
+      "category": "sofa",
+      "rating": "4.8",
+      "discount": "600"
+      },
+      {
+      "createdAt": "2023-01-18T10:28:34.235Z",
+      "name": "Terence Harber",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/673.jpg",
+      "id": "7",
+      "title": "sofa",
+      "price": "1200",
+      "description": "2,5-seat mod sofa w chaise longue, left with headrest/Samsala dark yellow-green",
+      "image": "https://www.ikea.com/in/en/images/products/jaettebo-2-5-seat-mod-sofa-w-chaise-longue-left-with-headrest-samsala-dark-yellow-green__1172569_pe893363_s5.jpg?f=s",
+      "category": "sofa",
+      "rating": "4.8",
+      "discount": "300"
+      },
+      {
+      "createdAt": "2023-01-18T21:19:23.436Z",
+      "name": "Rolando Kilback",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/379.jpg",
+      "id": "8",
+      "title": "sofa",
+      "price": "1200",
+      "description": "2-seat sofa, Sporda natural",
+      "image": "https://www.ikea.com/in/en/images/products/groenlid-2-seat-sofa-sporda-natural__0642294_ph148727_s5.jpg?f=s",
+      "category": "sofa",
+      "rating": "4.8",
+      "discount": "300"
+      }
+  ]
+  
+}
