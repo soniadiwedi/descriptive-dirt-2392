@@ -11,12 +11,16 @@ import {
   Heading,
   Text,
   useColorModeValue,
+  Center
 } from "@chakra-ui/react";
+import { useContext } from "react";
+import { AuthContext } from "../Context/AuthContextProvide";
 
 
 
 
 export default function LoginPage() {
+  const{isAuth,login}=useContext(AuthContext)
   return (
     <Flex justify={"center"} mt={10}>
       <Stack mx={"auto"} w='85%'>
@@ -26,7 +30,9 @@ export default function LoginPage() {
           bg={useColorModeValue("white", "gray.700")}
           boxShadow={"lg"}
           p={8}
+
         >
+          <Center>Login</Center>
           <Stack spacing={4} >
             <FormControl id="email">
               <FormLabel>Email address</FormLabel>
@@ -45,10 +51,12 @@ export default function LoginPage() {
              
               </Stack>
               <Button
+                onClick={login}
                 bg={"blue.400"}
                 color={"white"}
                 _hover={{
                   bg: "blue.500",
+                
                 }}
               >
                Log In

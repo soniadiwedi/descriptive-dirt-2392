@@ -20,10 +20,16 @@ import {
   import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
   import { MdLocalShipping } from 'react-icons/md';
   import { BiRupee } from "react-icons/bi";
+  import Footers from './Footer';
+
+
+
   export default function CardDetails(data) {
 
     console.log(data.data.image)
     return (
+      <>
+      
       <Container maxW={'7xl'}>
         <SimpleGrid
           columns={{ base: 1, lg: 2 }}
@@ -159,7 +165,7 @@ import {
               </Box>
             </Stack>
   
-            <Button
+           <Button
               rounded={'none'}
               w={'full'}
               mt={8}
@@ -174,7 +180,7 @@ import {
               }}>
               Add to cart
             </Button>
-  
+           
             <Stack direction="row" alignItems="center" justifyContent={'center'}>
               <MdLocalShipping />
               <Text>2-3 business days delivery</Text>
@@ -182,5 +188,8 @@ import {
           </Stack>
         </SimpleGrid>
       </Container>
+
+      <Footers/>
+      </>
     );
   }

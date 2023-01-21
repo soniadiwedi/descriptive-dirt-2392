@@ -17,6 +17,8 @@ import {
   import { BiRupee } from "react-icons/bi";
 
   import {Link as lanvlink} from "react-router-dom"
+import { useContext } from 'react';
+import { CartContext } from '../Context/CartContextProvider';
   
   const data = {
     isNew: true,
@@ -69,7 +71,10 @@ import {
     );
   }
   
-  function SingleProduct({id,image,description,category,discount,name,rating,price}) {
+  function SingleProduct({id,image,description,category,discount,name,rating,price,el}) {
+
+    const {setCartItem}= useContext(CartContext);
+
     return (
       <Flex marginBottom="10px" paddingBottom="40px" w="90%" alignItems="center" justifyContent="center" margin="auto" boxShadow="l" >
         <Box
@@ -127,7 +132,7 @@ import {
                 color={'gray.800'}
                 fontSize={'1.2em'}>
                 <chakra.a href={'#'} display={'flex'}>
-                 <Icon as={FiShoppingCart} h={7} w={7} alignSelf={'center'} />
+                 <Icon onClick={()=>{setCartItem(el)}} as={FiShoppingCart} h={7} w={7} alignSelf={'center'} />
                 </chakra.a>
               </Tooltip>
             </Flex>
@@ -146,7 +151,7 @@ import {
               </Box>
               
             </Flex>
-            <Link as={lanvlink} to={`/products/bedroome/${id}`}>More Information</Link>
+            <Link as={lanvlink} to={`/products/${id}`}>More Information</Link>
             {/* <Button>More Information</Button> */}
           </Box>
         </Box>

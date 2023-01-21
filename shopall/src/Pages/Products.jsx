@@ -1,6 +1,7 @@
 import { Box, Grid, GridItem ,Heading,Image,Text,Link} from '@chakra-ui/react'
 
 import {Link as lanvlink} from "react-router-dom"
+import Footers from './Footer'
 
 export default function Products() {
 
@@ -66,7 +67,7 @@ export default function Products() {
 </Box>
 
 
-
+<Footers/>
 </>
    
    

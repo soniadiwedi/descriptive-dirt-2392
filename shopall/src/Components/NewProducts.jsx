@@ -9,12 +9,17 @@ import {
   Button,
   Icon,
   GridItem,
-  Grid
+  Grid,
+  Link
 } from "@chakra-ui/react";
+import { Link as navlink } from 'react-router-dom';
 
 import { BiRupee } from "react-icons/bi";
+import { useContext } from "react";
+import { CartContext } from "../Context/CartContextProvider";
 
-export default function NewProducts({ title, image, price, category }) {
+export default function NewProducts({ title, image, price, category,el }) {
+  const{setCartItem}=useContext(CartContext)
   return (
     <Box>
       <Box>
@@ -80,7 +85,7 @@ export default function NewProducts({ title, image, price, category }) {
                 {price}
               </Text>
             </Stack>
-            <Button>Add to Card</Button>
+          <Link onClick={()=>{setCartItem(el)}} ><Button>Add to Card</Button></Link>
           </Stack>
         </Box>
       </Center>
