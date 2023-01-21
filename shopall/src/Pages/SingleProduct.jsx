@@ -71,7 +71,7 @@ import {
   
   function SingleProduct({id,image,description,category,discount,name,rating,price}) {
     return (
-      <Flex p={11} w="95%" alignItems="center" justifyContent="center" margin="auto" >
+      <Flex marginBottom="10px" paddingBottom="40px" w="90%" alignItems="center" justifyContent="center" margin="auto" boxShadow="l" >
         <Box
           bg={useColorModeValue('white', 'gray.800')}
           minH="md"
@@ -146,10 +146,14 @@ import {
               </Box>
               
             </Flex>
-            <Button>More Information</Button>
+            <Link as={lanvlink} to={`/products/bedroome/${id}`}>More Information</Link>
+            {/* <Button>More Information</Button> */}
           </Box>
         </Box>
       </Flex>
+
+                
+
     );
   }
   

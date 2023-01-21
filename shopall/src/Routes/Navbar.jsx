@@ -55,7 +55,7 @@ export default function Navbar() {
 
   return (
     <Box>
-      <Flex
+      <Flex margin="auto" width="94%"
         bg={useColorModeValue('white', 'gray.800')}
         color={useColorModeValue('gray.600', 'white')}
         minH={'60px'}
@@ -82,7 +82,7 @@ export default function Navbar() {
        <Menus/>
           <Flex display={{ base: 'none', md: 'flex' }} alignItems='center' ml={10}>
             <Image src={logo}  width="10%"/>
-                <Input placeholder="What are you looking for?" borderRadius='none' variant='filled' htmlSize={80} padding={6} marginLeft={5} />
+                <Input placeholder="What are you looking for?" borderRadius='none' variant='filled' htmlSize={80} padding={6} marginLeft={5}  />
               <Button size='md' pt='1.6rem' pb='1.6rem' borderRadius='none'><Icon fontSize='28' as={BsSearch}></Icon></Button>
               </Flex>
         </Flex>
