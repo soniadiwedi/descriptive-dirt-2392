@@ -25,23 +25,25 @@ import {
   InputGroup,
   InputRightElement,
   Link,
+  Center
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useContext } from "react";
 import { useState } from "react";
 import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
 import { BiUser } from "react-icons/bi";
 import LoginPage from "./LoginPage";
+import { AuthContext } from "../Context/AuthContextProvide";
 export default function Login() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
   const [showPassword, setShowPassword] = useState(false);
+    const{isAuth,login,logout}=useContext(AuthContext)
+ 
   return (
     <>
       
-      <Icon _hover={{bg:"grey",cursor:"pointer"}}  as={BiUser} onClick={onOpen} fontSize={30}>Hej! Log in or sign up</Icon>
-      <Text>Hej! Log in or sign up</Text>
-     
-      
+     <Flex> <Icon _hover={{bg:"grey",cursor:"pointer"}}  as={BiUser} onClick={onOpen} fontSize={30}>Hej! Log in or sign up</Icon>
+      <Text> {isAuth?<Text onClick={logout}>Sonia</Text> : <Text>Hej! Log in or sign up</Text> } </Text></Flex>
       <Drawer
         isOpen={isOpen}
         placement="right"
@@ -53,15 +55,16 @@ export default function Login() {
         <DrawerContent>
           <DrawerCloseButton />
           <DrawerHeader bg="white">
-            <Flex justify={"center"}>
+            <Flex justify={"center"} >
               <Stack mx={"auto"} maxW={"sm"}>
                
                 <Box
+               
                   rounded={"lg"}
                   bg={useColorModeValue("white", "gray.700")}
                   boxShadow={"lg"}
                   p={6}
-                >
+                > <Center>Sign UP</Center>
                   <Stack >
                     <HStack>
                       <Box>
@@ -99,6 +102,7 @@ export default function Login() {
                     </FormControl>
                     <Stack spacing={10} pt={2}>
                       <Button
+                      
                         loadingText="Submitting"
                         size="lg"
                         bg={"blue.400"}

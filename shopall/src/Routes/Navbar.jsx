@@ -17,7 +17,9 @@ import {
   Image,
   Input,
   InputGroup,
-  InputLeftElement
+  InputLeftElement,
+  Heading,
+  Badge
 } from '@chakra-ui/react';
 import {
   HamburgerIcon,
@@ -33,7 +35,10 @@ import Login from './Login';
 import { FiTruck } from "react-icons/fi";
 import { BsFillBasket2Fill,BsSearch } from "react-icons/bs";
 import { NavLink } from 'react-router-dom';
-
+import { useContext } from 'react';
+import { AuthContext } from '../Context/AuthContextProvide';
+import { Link as navlink } from 'react-router-dom';
+import { CartContext } from '../Context/CartContextProvider';
 
 
 
@@ -41,7 +46,8 @@ import { NavLink } from 'react-router-dom';
 
 export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
-
+ 
+const {cart}=useContext(CartContext);
   const links=[{path:"/", title:"Home"},{path:"/products", title:"Products"},{path:"./newinShopAll", title:"NewinShopAll"},{path:"/offers", title:"Offers"}]
   const style={
     display:'flex',
@@ -81,14 +87,21 @@ export default function Navbar() {
         <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
        <Menus/>
           <Flex display={{ base: 'none', md: 'flex' }} alignItems='center' ml={10}>
-            <Image src={logo}  width="10%"/>
-                <Input placeholder="What are you looking for?" borderRadius='none' variant='filled' htmlSize={80} padding={6} marginLeft={5}  />
-              <Button size='md' pt='1.6rem' pb='1.6rem' borderRadius='none'><Icon fontSize='28' as={BsSearch}></Icon></Button>
+           <Link as={navlink} to="/"> <Image src={logo}  width="50%"/></Link>
+                <Input placeholder="What are you looking for?" borderRadius='none' variant='filled' htmlSize={60} padding={6}   />
+                <Button size='md' pt='1.6rem' pb='1.6rem' borderRadius='none'><Icon fontSize='28' as={BsSearch}></Icon></Button>
               </Flex>
         </Flex>
+        <Flex alignItems='center' justifyContent='space-around' w='30%'>
+
         <Login/>
-        <Icon as={FiTruck} fontSize="25" marginLeft={8}></Icon>
-        <Icon as={BsFillBasket2Fill} fontSize="25" marginLeft={8} marginRight={8}></Icon>
+
+        <Icon as={FiTruck} fontSize="25"></Icon> 
+        <Box><Link as={navlink} to='/cartpage'><Icon as={BsFillBasket2Fill} fontSize="25" ></Icon>
+        <Badge colorScheme='green' position='absolute'>{cart.length}</Badge>
+        </Link>
+        </Box>
+        </Flex>
       </Flex>
       <Box style={style}>
       {
@@ -101,7 +114,6 @@ export default function Navbar() {
                 }
       </Box>
 
-      
     </Box>
   );
 }

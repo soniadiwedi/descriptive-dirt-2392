@@ -46,7 +46,7 @@ export default function NewinShopAll() {
   };
 
 const product=data.map((el)=>{
-    return <NewProducts {...el}/>
+    return <NewProducts {...el} el={el}/>
 })
 
   return (
