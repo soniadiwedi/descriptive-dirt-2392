@@ -6,6 +6,8 @@ import NewinShopAll from "../Pages/NewinShopAll"
 import Offers from "../Pages/Offers"
 import Products from "../Pages/Products"
 import SingleItem from "../Pages/SingleItem"
+import LoginPage from "./LoginPage"
+import PrivateRountes from "./PrivateRountes"
 
 
 
@@ -20,7 +22,8 @@ export default function AllRoutes() {
             <Route path="/products/:id" element={<SingleItem/>}/>           
             <Route path="/newinShopAll" element={<NewinShopAll/>}/>
             <Route path="/offers" element={<Offers/>}/>
-            <Route path="/cartpage" element={<CartPage/>}/>
+            <Route path="/cartpage" element={<PrivateRountes><CartPage/></PrivateRountes> }/>
+            <Route path="/login" element={<LoginPage/>}/>
         </Routes>
     
     </>

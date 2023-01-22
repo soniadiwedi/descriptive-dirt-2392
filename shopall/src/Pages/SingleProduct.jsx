@@ -19,7 +19,7 @@ import {
   import {Link as lanvlink} from "react-router-dom"
 import { useContext } from 'react';
 import { CartContext } from '../Context/CartContextProvider';
-  
+import Toasts from '../Components/Toasts'; 
   const data = {
     isNew: true,
     imageURL:
@@ -133,6 +133,7 @@ import { CartContext } from '../Context/CartContextProvider';
                 fontSize={'1.2em'}>
                 <chakra.a href={'#'} display={'flex'}>
                  <Icon onClick={()=>{setCartItem(el)}} as={FiShoppingCart} h={7} w={7} alignSelf={'center'} />
+                 
                 </chakra.a>
               </Tooltip>
             </Flex>

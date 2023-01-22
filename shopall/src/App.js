@@ -6,13 +6,12 @@ import Navbars from './Routes/Menus';
 import Home from './Pages/Home';
 import AllRoutes from './Routes/AllRoutes';
 import CartContextProvider from './Context/CartContextProvider';
+import { Skeleton, SkeletonCircle, SkeletonText } from '@chakra-ui/react'
 function App() {
   return (
     <div>
-  <CartContextProvider>
-
-      <Navbar/>
-      
+  <CartContextProvider> 
+      <Navbar/>  
       <AllRoutes/>
   </CartContextProvider>
      

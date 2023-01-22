@@ -25,7 +25,8 @@ import {
   InputGroup,
   InputRightElement,
   Link,
-  Center
+  Center,
+  Toast
 } from "@chakra-ui/react";
 import React, { useContext } from "react";
 import { useState } from "react";
@@ -33,6 +34,7 @@ import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
 import { BiUser } from "react-icons/bi";
 import LoginPage from "./LoginPage";
 import { AuthContext } from "../Context/AuthContextProvide";
+import Toasts from "../Components/Toasts";
 export default function Login() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
@@ -111,7 +113,7 @@ export default function Login() {
                           bg: "blue.500",
                         }}
                       >
-                        Sign up
+                        <Toasts  titlemsg="Registration Successfull" des="" posi='top' msg="Sign Up"/>
                       </Button>
                     </Stack>
                   
