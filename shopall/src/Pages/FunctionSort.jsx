@@ -26,7 +26,7 @@ export default function FunctionSort({setorder}) {
           Sort By Price
         </MenuButton>
         <MenuList>
-        <MenuItem onClick={()=>{setorder("asc")}}>Mark as Draft</MenuItem>
+        
 
           <MenuItem onClick={()=>{setorder("asc")}}>Low to High</MenuItem>
           <MenuItem onClick={()=>{setorder("desc")}}>High to Low</MenuItem>

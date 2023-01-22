@@ -21,12 +21,16 @@ import {
   import { MdLocalShipping } from 'react-icons/md';
   import { BiRupee } from "react-icons/bi";
   import Footers from './Footer';
+import { useContext } from 'react';
+import { CartContext } from '../Context/CartContextProvider';
+import Toasts from '../Components/Toasts';
 
 
 
   export default function CardDetails(data) {
-
-    console.log(data.data.image)
+    const {setCartItem}=useContext(CartContext)
+    
+    
     return (
       <>
       
@@ -166,6 +170,8 @@ import {
             </Stack>
   
            <Button
+            onClick={()=>{setCartItem(data.data)}}
+
               rounded={'none'}
               w={'full'}
               mt={8}
@@ -177,8 +183,8 @@ import {
               _hover={{
                 transform: 'translateY(2px)',
                 boxShadow: 'lg',
-              }}>
-              Add to cart
+              }} >
+              <Toasts titlemsg=  "successfully added" des="" msg="Add to Cart" posi='top-left'/>
             </Button>
            
             <Stack direction="row" alignItems="center" justifyContent={'center'}>

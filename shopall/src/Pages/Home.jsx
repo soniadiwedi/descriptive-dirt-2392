@@ -1,4 +1,4 @@
-import { Grid, GridItem, Image } from "@chakra-ui/react";
+import { Box, Grid, GridItem, Heading, Image } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import NewProducts from "../Components/NewProducts";
 import Carosals from "../Pages/Carosals";
@@ -87,9 +87,9 @@ export default function Home() {
 
       <Carosals />
       <ImageCarausel />
-
+       <Box> <Heading marginLeft={10} marginTop={10} fontSize={"28"}>Buy New Furniture's</Heading>   
       <Carousel responsive={responsive}>{product}</Carousel>
-
+      </Box> 
       <Grid
         templateRows="repeat(2, 1fr)"
         templateColumns="repeat(4, 1fr)"

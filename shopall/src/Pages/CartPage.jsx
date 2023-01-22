@@ -1,24 +1,39 @@
-import { Stack,Heading,Divider,ButtonGroup,  Button, Image, Text, Wrap, WrapItem } from "@chakra-ui/react";
+import { Stack,Heading,Divider,ButtonGroup,  Button, Image, Text, Wrap, WrapItem, Box } from "@chakra-ui/react";
 import { useContext } from "react";
 import { CartContext } from "../Context/CartContextProvider";
 import { Card, CardHeader, CardBody, CardFooter } from '@chakra-ui/react'
+import { useState } from "react";
+import { useEffect } from "react";
+import Footers from "./Footer";
 
 export default function CartPage() {
-  const { cart } = useContext(CartContext);
+  const { cart,setCart,remove,increQuantity,totalprice } = useContext(CartContext);
   console.log(cart);
-  return (
-   
-    <Wrap>
-   
+  const[price,setprice]=useState(0)
+  /////////////////////////////////////////////////
+ 
+ 
+ 
+ 
+
+
+//////////////////////////////////////////////////
   
 
+////////////////////////////////////////////////////////
+ 
+  return (
+     <>
+      <Heading> Cart Total :{totalprice}  </Heading>
+    <Wrap>
+      
       {
         cart.map((el)=>{
             return (
   <WrapItem>
             
             <Card maxW='sm'>
-  <CardBody >
+  <CardBody key={el.id}>
     <Image
       src={el.image}
       alt='Green double couch with wooden legs'
@@ -42,14 +57,14 @@ export default function CartPage() {
         Buy now
       </Button>
       
-      <Button variant='ghost' colorScheme='blue'>
-       +
-      </Button>
-      <Button>1</Button>
-      <Button variant='ghost' colorScheme='blue'>
+      <Button variant='ghost' onClick={()=>{increQuantity(el.id,-1)}} colorScheme='blue' _isdisabled={el.quantity==1}>
        -
       </Button>
-      <Button variant='solid' colorScheme='blue'>
+      <Button >{el.quantity}</Button>
+      <Button variant='ghost' onClick={()=>{increQuantity(el.id,1)}} colorScheme='blue' >
+       +
+      </Button>
+      <Button variant='solid' colorScheme='blue' onClick={()=>remove(el.id)}>
        Remove
       </Button>
     </ButtonGroup>
@@ -60,9 +75,11 @@ export default function CartPage() {
      )
      
         })
-      }
-
-     
-   </Wrap>
+      }     
+   </Wrap> 
+    <Box marginTop="50%">
+   <Footers/>
+   </Box>
+   </>   
   );
 }

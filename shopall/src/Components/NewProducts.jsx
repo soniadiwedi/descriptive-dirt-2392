@@ -17,6 +17,7 @@ import { Link as navlink } from 'react-router-dom';
 import { BiRupee } from "react-icons/bi";
 import { useContext } from "react";
 import { CartContext } from "../Context/CartContextProvider";
+import Toasts from "./Toasts";
 
 export default function NewProducts({ title, image, price, category,el }) {
   const{setCartItem}=useContext(CartContext)
@@ -85,7 +86,10 @@ export default function NewProducts({ title, image, price, category,el }) {
                 {price}
               </Text>
             </Stack>
-          <Link onClick={()=>{setCartItem(el)}} ><Button>Add to Card</Button></Link>
+          <Link onClick={()=>{setCartItem(el)}} ><Button>
+           <Toasts  titlemsg="successfully added" des="" posi='top-left' msg="Add To Card"/>
+            
+            </Button></Link>
           </Stack>
         </Box>
       </Center>

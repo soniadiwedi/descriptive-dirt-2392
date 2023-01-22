@@ -1,9 +1,9 @@
 import { Button,Drawer,DrawerOverlay,DrawerContent,DrawerCloseButton,DrawerHeader,DrawerBody,Input,DrawerFooter,useDisclosure,Image, Heading, Text,
-  UnorderedList, ListItem,useBreakpointValue, Flex, Center,Grid} from "@chakra-ui/react"
+  UnorderedList, ListItem,useBreakpointValue, Flex, Center,Grid,Link} from "@chakra-ui/react"
 import { Icon } from '@chakra-ui/react'
 import {HamburgerIcon} from "@chakra-ui/icons"
 import React from "react"
-
+import { NavLink as navlink } from "react-router-dom"
 import logo from './logo.jpg'
 
 
@@ -36,13 +36,13 @@ export default function Menus() {
   
             <DrawerBody>
             <UnorderedList lineHeight={10} style={{listStyleType: "none"  }}>
-                    <ListItem>Join SHOPALL Family</ListItem>
+                 <Link as={navlink} to="/products/bedroome"> <ListItem>Join SHOPALL Family</ListItem>
                     <ListItem>SHOPALL Business</ListItem>
                     <ListItem>SHOPALL Restaurant</ListItem>
                     <ListItem>Our stores</ListItem>
                     <ListItem>Design your room </ListItem>
                     <ListItem> Customer service </ListItem>
-                    <ListItem>Download the SHOPALL app</ListItem>
+                    <ListItem>Download the SHOPALL app</ListItem></Link>  
                     </UnorderedList>
 
             

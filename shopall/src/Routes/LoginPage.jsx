@@ -14,6 +14,7 @@ import {
   Center
 } from "@chakra-ui/react";
 import { useContext } from "react";
+import Toasts from "../Components/Toasts";
 import { AuthContext } from "../Context/AuthContextProvide";
 
 
@@ -59,7 +60,7 @@ export default function LoginPage() {
                 
                 }}
               >
-               Log In
+               <Toasts titlemsg="Welcome ....." des="" posi='top' msg="Log In"/>
               </Button>
             </Stack>
           </Stack>
